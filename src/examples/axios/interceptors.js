@@ -22,6 +22,8 @@ authFetch.interceptors.response.use(
   },
   (error) => {
     console.log(error.response);
+    // here we can use it if the authorization fails then
+    // we will get status code 401 and we can ask for login 
     if (error.response.status === 404) {
       // do something
       console.log('NOT FOUND');

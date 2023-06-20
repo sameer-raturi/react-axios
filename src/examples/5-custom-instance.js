@@ -1,14 +1,9 @@
 import { useEffect } from 'react';
-
-const randomUserUrl = 'https://randomuser.me/api';
+import { fetchProductUsingCustomInstance } from './actions';
 
 const CustomInstance = () => {
-  const fetchData = async () => {
-    console.log('custom axios instance');
-  };
-
   useEffect(() => {
-    fetchData();
+    fetchProductUsingCustomInstance();
   }, []);
 
   return <h2 className='text-center'>custom instance</h2>;

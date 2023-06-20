@@ -1,15 +1,10 @@
 import { useEffect } from 'react';
-
-const productsUrl = 'https://course-api.com/react-store-products';
-const randomUserUrl = 'https://randomuser.me/api';
+// import './axios/global';
+import { fetchProductUsingGlobal } from './actions';
 
 const GlobalInstance = () => {
-  const fetchData = async () => {
-    console.log('global axios instance');
-  };
-
   useEffect(() => {
-    fetchData();
+    fetchProductUsingGlobal();
   }, []);
 
   return <h2 className='text-center'>global instance</h2>;

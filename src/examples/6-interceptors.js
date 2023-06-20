@@ -1,14 +1,9 @@
 import { useEffect } from 'react';
-
-const url = 'https://course-api.com/react-store-products';
+import { fetchProductUsingCustomInstanceAndInterceptors } from './actions';
 
 const Interceptors = () => {
-  const fetchData = async () => {
-    console.log('axios interceptors');
-  };
-
   useEffect(() => {
-    fetchData();
+    fetchProductUsingCustomInstanceAndInterceptors();
   }, []);
 
   return <h2 className='text-center'>interceptors</h2>;
